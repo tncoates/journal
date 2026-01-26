@@ -6,13 +6,41 @@
     </head>
     <body>
 
-        <h3>Quick Entry</h3>
-
-        <input id="title" placeholder="Title" />
-        <input id="date" type="datetime-local" />
-
-        <button id="save">Save</button>
-
-        <script src="popup.js"></script>
+      <h3>Quick Entry</h3>
+    
+      <input id="title" placeholder="Title" maxlength="100" />
+    
+      <textarea
+        id="description"
+        placeholder="Description (optional)"
+        maxlength="300"
+        rows="4"
+      ></textarea>
+    
+      <input id="date" type="datetime-local" />
+    
+      <div class="reminder-toggle">
+        <span>Remind Me?</span>
+        <input type="checkbox" id="remindMe" />
+      </div>
+    
+      <div id="reminderOptions" hidden>
+        <input
+          id="remindAmount"
+          type="number"
+          min="1"
+          value="10"
+        />
+    
+        <select id="remindUnit">
+          <option value="minutes">minutes before</option>
+          <option value="hours">hours before</option>
+        </select>
+      </div>
+    
+      <button id="save">Save</button>
+    
+      <script src="popup.js"></script>
     </body>
+    
 </html>

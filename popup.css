@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: system-ui, sans-serif;
   width: 250px;
@@ -7,4 +11,50 @@ body {
 input, button {
   width: 100%;
   margin-bottom: 8px;
+}
+
+textarea {
+  resize: none;
+}
+
+.reminder-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+
+#reminderOptions {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+#reminderOptions input,
+#reminderOptions select {
+  flex: 1;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 6px;
+  cursor: pointer;
 }
