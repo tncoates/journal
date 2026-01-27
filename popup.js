@@ -44,4 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   });
+
+
+  document.getElementById("openCalendar").addEventListener("click", () => {
+    chrome.tabs.create({
+      url: chrome.runtime.getURL("calendar.html")
+    });
+  });
 });

@@ -1,0 +1,32 @@
+body {
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.entry {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.entry-title {
+  font-weight: 600;
+}
+
+.entry-date {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.entry-desc {
+  margin-bottom: 6px;
+}
+
+.entry-reminder {
+  font-size: 13px;
+  color: #444;
+}
