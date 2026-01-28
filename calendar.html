@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Journal Calendar</title>
-        <link rel="stylesheet" href="calendar.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journal Calendar</title>
+    <link rel="stylesheet" href="calendar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h3>Entries</h3>
+          <button id="clearFilter" title="Show all">Show All</button>
+        </div>
+        <div id="list" class="list"></div>
+      </aside>
 
-    <body>
-        <h2>Entries</h2>
+      <main class="main">
+        <div class="calendar-header">
+          <button id="prev">&lt;</button>
+          <div id="monthLabel" class="month-label"></div>
+          <button id="next">&gt;</button>
+        </div>
 
-        <div id="entries"></div>
+        <div class="weekdays">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
 
-        <script src="calendar.js"></script>
-    </body>
+        <div id="grid" class="grid" tabindex="0"></div>
+      </main>
+    </div>
 
+    <script src="calendar.js"></script>
+  </body>
 </html>
