@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Journal Calendar</title>
     <link rel="stylesheet" href="calendar.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          <h3>Entries</h3>
-          <button id="clearFilter" title="Show all">Show All</button>
-        </div>
-        <div id="list" class="list"></div>
-      </aside>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Entries</h3>
+                <button id="clearFilter" title="Show all">Show All</button>
+            </div>
+            <div id="list" class="list"></div>
+        </aside>
 
-      <main class="main">
-        <div class="calendar-header">
-          <button id="prev">&lt;</button>
-          <div id="monthLabel" class="month-label"></div>
-          <button id="next">&gt;</button>
-        </div>
+        <main class="main">
+            <div class="calendar-header">
+                <button id="prev">&lt;</button>
+                <div id="monthLabel" class="month-label"></div>
+                <button id="next">&gt;</button>
+            </div>
 
-        <div class="weekdays">
-          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-        </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
 
-        <div id="grid" class="grid" tabindex="0"></div>
-      </main>
+            <div id="grid" class="grid" tabindex="0"></div>
+        </main>
     </div>
 
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Entry</h2>
+
+            <label>
+                Title
+                <input id="editTitle" type="text" />
+            </label>
+
+            <label>
+                Description
+                <textarea id="editDescription" maxlength="300"></textarea>
+            </label>
+
+            <label>
+                Date & Time
+                <input id="editDate" type="datetime-local" />
+            </label>
+
+            <div class="modal-actions">
+                <button id="cancelEdit">Cancel</button>
+                <button id="saveEdit">Save</button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="calendar.js"></script>
-  </body>
+</body>
+
 </html>
